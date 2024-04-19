@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git(url: "${env.https://github.com/sanjay302002/Lexion.git}", credentialsId: 'github-credentials')
             }
         }
         stage('Build') {
